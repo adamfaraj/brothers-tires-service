@@ -149,7 +149,7 @@ The hero emblem is the sole exception to square-cut geometry: a circular medalli
 - **Shape:** square with one trimmed corner (`clip-path` notch, 14px), never rounded.
 - **Primary:** solid signal red (#d82629) fill, white text, 2px red border, `0.9rem 1.6rem` padding, uppercase Barlow bold with 0.02em tracking.
 - **Kuruma (booking):** solid KurumaWorks blue (#2663eb) fill / white text at rest; fill and border darken to #1e4db7 on hover, text stays white. Reserved exclusively for booking CTAs (see Named Rule under Colors).
-- **Hover / Focus:** primary darkens to #a91d20, kuruma darkens to #1e4db7; all buttons shift 1px down on `:active`. Focus-visible gets a 3px solid red outline offset 3px, applied globally, not per-component. Every button hover darkens fill and border together rather than inverting to a light background, so the notch's cut edge never loses its border color.
+- **Hover / Focus:** primary darkens to #a91d20, kuruma darkens to #1e4db7; all buttons shift 1px down on `:active`. Focus-visible gets a 3px solid red outline offset 3px, applied globally, except `.btn-kuruma`, which swaps to a white outline since red-on-kuruma-blue falls well under 3:1 contrast. Every button hover darkens fill and border together rather than inverting to a light background, so the notch's cut edge never loses its border color.
 - **Mobile bar variant:** the fixed bottom bar's "Call" button drops the notch entirely (`clip-path: none`) and squares off — the one place the signature device is intentionally absent, for a full-bleed dual-button dock.
 
 ### Chips

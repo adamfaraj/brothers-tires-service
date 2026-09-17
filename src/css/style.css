@@ -266,6 +266,10 @@ body {
   border-color: var(--kuruma-blue-dark);
 }
 
+.btn-kuruma:focus-visible {
+  outline-color: var(--paper);
+}
+
 /* ---------- Header ---------- */
 
 .site-header {
