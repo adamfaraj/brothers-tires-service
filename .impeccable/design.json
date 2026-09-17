@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-17T00:00:00Z",
+  "title": "Design System: Brothers Tire LLC",
+  "extensions": {
+    "colorMeta": {
+      "signal-red": {
+        "role": "primary",
+        "displayName": "Signal Red",
+        "canonical": "#d82629",
+        "tonalRamp": ["#2d0a0a", "#4d1010", "#6e1315", "#a91d20", "#d82629", "#e15a5c", "#ea8b8c", "#f6d3d3"]
+      },
+      "signal-red-dark": {
+        "role": "primary-hover",
+        "displayName": "Signal Red Dark",
+        "canonical": "#a91d20",
+        "tonalRamp": ["#200606", "#3d0c0d", "#5a1112", "#a91d20", "#c23639", "#d66668", "#e79b9c", "#f5d6d7"]
+      },
+      "kuruma-blue": {
+        "role": "secondary",
+        "displayName": "KurumaWorks Blue",
+        "canonical": "#2663eb",
+        "tonalRamp": ["#0a1a3d", "#122c66", "#1a3f8f", "#2151bd", "#2663eb", "#5c8bf0", "#93b4f5", "#cfe0fb"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1a1613",
+        "tonalRamp": ["#0d0b09", "#1a1613", "#332b26", "#47403b", "#6b625b", "#8f857c", "#b8afa5", "#ded7cf"]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "#47403b",
+        "tonalRamp": ["#1a1613", "#2c2621", "#47403b", "#645b53", "#847a70", "#a89e93", "#cbc2b8", "#e8e2da"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#e8e2da", "#efeae1", "#f5f1ea", "#f9f6f1", "#fbf9f5", "#fdfcfa", "#ffffff", "#ffffff"]
+      },
+      "concrete": {
+        "role": "neutral",
+        "displayName": "Concrete",
+        "canonical": "#efeae1",
+        "tonalRamp": ["#3a352c", "#595244", "#7c7364", "#a89e8c", "#c8bfae", "#e2dbcd", "#efeae1", "#f7f4ee"]
+      },
+      "concrete-deep": {
+        "role": "neutral",
+        "displayName": "Concrete Deep",
+        "canonical": "#e2dbcd",
+        "tonalRamp": ["#332e25", "#4f483a", "#6f6650", "#948a6f", "#b6ab90", "#cfc4ad", "#e2dbcd", "#f0ebe0"]
+      },
+      "open-green": {
+        "role": "status",
+        "displayName": "Open Green",
+        "canonical": "#1c6b3c",
+        "tonalRamp": ["#08170e", "#0f2e1c", "#164a29", "#1c6b3c", "#278f52", "#4fb578", "#8bd4a8", "#c9ecd6"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display (Anton)", "purpose": "Hero letter-stack only; always uppercase, animated in on load." },
+      "headline": { "displayName": "Section Headline (Anton)", "purpose": "Section titles; uppercase, tight tracking." },
+      "body": { "displayName": "Body (Barlow)", "purpose": "Lede copy and running text, max 62ch." },
+      "label": { "displayName": "Label (Barlow Bold)", "purpose": "Uppercase micro-labels: quickfacts, tags, chips, nav." }
+    },
+    "motion": [
+      { "name": "sign-letter", "value": "640ms cubic-bezier(0.16, 1, 0.3, 1) translateY(0.4em)->0 / opacity 0->1, staggered 140ms", "purpose": "One-time hero letter-stack reveal on load; disabled under prefers-reduced-motion." },
+      { "name": "state-transition", "value": "160ms ease", "purpose": "Default hover/focus transition for buttons, links, nav underlines." }
+    ],
+    "breakpoints": [
+      { "name": "nav-collapse", "value": "860px" },
+      { "name": "header-compact", "value": "720px" },
+      { "name": "logo-mark-swap", "value": "640px" },
+      { "name": "hero-stack", "value": "900px" },
+      { "name": "board-2col", "value": "780px" },
+      { "name": "board-1col", "value": "520px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Solid signal-red CTA with a trimmed bottom-right corner; used for phone/directions actions.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"tel:+19848880002\">Ask In-Store</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.02em; padding: 0.9rem 1.6rem; border: 2px solid transparent; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%); transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease; cursor: pointer; } .ds-btn:active { transform: translateY(1px); } .ds-btn-primary { background: #d82629; color: #ffffff; border-color: #d82629; } .ds-btn-primary:hover { background: #a91d20; border-color: #a91d20; } .ds-btn-primary:focus-visible { outline: 3px solid #d82629; outline-offset: 3px; }"
+    },
+    {
+      "name": "Kuruma Booking Button",
+      "kind": "button",
+      "refersTo": "button-kuruma",
+      "description": "Deliberately non-brand blue booking CTA, reserved only for KurumaWorks booking links.",
+      "html": "<a class=\"ds-btn ds-btn-kuruma\" href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">Book Us on Kuruma</a>",
+      "css": ".ds-btn-kuruma { display: inline-flex; align-items: center; justify-content: center; font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.02em; padding: 0.9rem 1.6rem; border: 2px solid #2663eb; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%); background: #2663eb; color: #ffffff; transition: background-color 160ms ease, color 160ms ease; } .ds-btn-kuruma:hover { background: #ffffff; color: #2663eb; } .ds-btn-kuruma:focus-visible { outline: 3px solid #d82629; outline-offset: 3px; }"
+    },
+    {
+      "name": "Tag Chip",
+      "kind": "chip",
+      "refersTo": "chip-tag",
+      "description": "Small solid-red uppercase label chip used on the services board.",
+      "html": "<span class=\"ds-chip\">Tires</span>",
+      "css": ".ds-chip { display: inline-block; background: #d82629; color: #ffffff; font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.25rem 0.55rem; }"
+    },
+    {
+      "name": "Why Panel",
+      "kind": "card",
+      "refersTo": "whyboard-panel",
+      "description": "Alternating ink/red flat-color placard with a trimmed bottom-left corner; the signature 'why us' component.",
+      "html": "<div class=\"ds-panel ds-panel-red\"><p class=\"ds-panel-word\">No<br/>Credit</p><p class=\"ds-panel-note\">Financing available through Snap Finance and Koalafi.</p></div>",
+      "css": ".ds-panel { padding: 2rem 1.5rem; clip-path: polygon(0 0, 100% 0, 100% 100%, 14px 100%); color: #ffffff; } .ds-panel-red { background: #d82629; } .ds-panel-ink { background: #1a1613; } .ds-panel-word { font-family: 'Anton', 'Arial Narrow', sans-serif; font-size: 1.85rem; line-height: 1.3; text-transform: uppercase; margin-bottom: 1rem; } .ds-panel-note { font-family: 'Barlow', sans-serif; font-size: 0.95rem; opacity: 0.88; }"
+    },
+    {
+      "name": "Sticky Header Nav",
+      "kind": "nav",
+      "refersTo": "site-header",
+      "description": "Sticky white header with logo, nav links, phone, and blue booking CTA.",
+      "html": "<header class=\"ds-header\"><a class=\"ds-header-phone\" href=\"tel:+19848880002\">(984) 888-0002</a><a class=\"ds-btn ds-btn-kuruma\" href=\"#\">Book Now</a></header>",
+      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; height: 76px; padding-inline: 1.5rem; background: #ffffff; border-bottom: 1px solid rgba(26,22,19,0.14); } .ds-header-phone { font-family: 'Anton', 'Arial Narrow', sans-serif; font-size: 1.15rem; color: #1a1613; font-variant-numeric: tabular-nums; transition: color 160ms ease; } .ds-header-phone:hover { color: #d82629; }"
+    },
+    {
+      "name": "Hero Letter-Stack",
+      "kind": "custom",
+      "refersTo": "hero-title",
+      "description": "Two-tone animated Anton letter reveal; ink word then red word, staggered 140ms, disabled under prefers-reduced-motion.",
+      "html": "<h1 class=\"ds-hero-title\"><span class=\"ds-hero-word-ink\">Brothers</span><span class=\"ds-hero-word-red\">Tire</span></h1>",
+      "css": ".ds-hero-title { font-family: 'Anton', 'Arial Narrow', sans-serif; font-size: clamp(3rem, 9vw, 6rem); line-height: 0.92; letter-spacing: -0.01em; text-transform: uppercase; } .ds-hero-title span { display: block; animation: ds-sign-letter 640ms cubic-bezier(0.16, 1, 0.3, 1) both; } .ds-hero-word-ink { color: #1a1613; } .ds-hero-word-red { color: #d82629; animation-delay: 140ms; } @keyframes ds-sign-letter { from { opacity: 0; transform: translateY(0.4em); } to { opacity: 1; transform: translateY(0); } } @media (prefers-reduced-motion: reduce) { .ds-hero-title span { animation: none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Shop-Sign Graphics",
+    "overview": "The real hand-lettered vinyl banner on the shop wall (visible in public/outside.webp) is the whole design system, not a reference for one. Everything on the page is built the way a sign shop builds a banner: bold, blocky, even-stroke lettering; a strict flat ink palette; and edges cut, not rounded. The build refuses the tire-shop category default of soft SaaS gradients, rounded pill buttons, and icon-grid feature blocks; there are zero gradients, zero box-shadows, and zero glassmorphism anywhere in the shipped CSS. The system is loud where it needs to be (the hero letter-stack, the red ink blocks) and gets out of the way everywhere else: white and warm concrete grounds, hairline rules standing in for grommet lines, and Barlow doing plain, legible work at UI scale. Signal red is rationed to ink blocks -- hero accents, tags, dividers, CTA panels -- not washed across backgrounds.",
+    "keyCharacteristics": [
+      "Flat ink blocks in red, black, and white; no gradients, no glass, no soft drop shadows anywhere in the build.",
+      "A single recurring trimmed-corner \"cut vinyl\" notch (clip-path) unifies buttons, banners, and panels.",
+      "Anton for all display lettering (always uppercase, tight leading); Barlow for everything read at body/UI size.",
+      "The real shop photo (outside.webp) is bled to the hero edge as proof-of-place, never used as a background wash."
+    ],
+    "rules": [
+      { "name": "The Kuruma-Blue Separation Rule", "body": "KurumaWorks blue (#2663eb) is a foreign, non-brand color by design, reserved only for the external booking action (.btn-kuruma). It must never be blended into the red/ink/concrete palette or reused for any other purpose -- its visual distinctness is the point, marking \"this leaves the shop's own brand voice.\"", "section": "colors" },
+      { "name": "The Rationed Red Rule", "body": "Signal red reads as ink, not wallpaper: it appears in bounded blocks (buttons, tags, banner strips, alternating why-panels) against white or concrete grounds, never as a full-bleed background wash.", "section": "colors" },
+      { "name": "The All-Caps Display Rule", "body": "Anton is never set in mixed case; every instance in the build is uppercase, matching cut-vinyl sign lettering.", "section": "typography" },
+      { "name": "The No-Shadow Rule", "body": "Surfaces never lift with a shadow. Separation between elements is carried by flat color contrast and hairline rules only.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep all display type (Anton) uppercase; it is never set in mixed or lower case anywhere in the build.",
+      "Do use the single-corner clip-path notch (14px) as the one recurring signature silhouette for buttons, banners, and accent panels -- not a generic rounded radius.",
+      "Do ration signal red to bounded ink blocks (buttons, tags, banners, alternating panels), not full backgrounds.",
+      "Do keep KurumaWorks blue (#2663eb) confined to booking CTAs only, visually distinct from the shop's own palette everywhere else."
+    ],
+    "donts": [
+      "Don't add gradients, glassmorphism, or box-shadow anywhere; the system is flat by commitment, and every current surface ships with zero shadow declarations.",
+      "Don't round any corner; the only cut allowed is the single trimmed-corner clip-path notch or, for the hero emblem, a true circle.",
+      "Don't blend KurumaWorks blue into the brand palette or reuse it outside .btn-kuruma.",
+      "Don't treat --red-deep (#6e1315) as an active system color: it is declared in :root but not used anywhere in the shipped build. Carry it as a reserved/unused token rather than inventing a use for it or removing it silently."
+    ]
+  }
+}

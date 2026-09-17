@@ -1,0 +1,27 @@
+{
+  "buildPath": "code",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "src/index.html"
+        ],
+        "createdAt": "2026-09-17T14:24:06.596Z",
+        "reason": "Agent: hero border flush child is the intentional full-bleed real shop photo (direction contract calls for it to bleed to the edge as proof-of-place), not text; quickfacts divider padding is non-zero via nth-child overrides that load after the base 0-padding shorthand, verified in CSS and in screenshots"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "src/index.html"
+        ],
+        "createdAt": "2026-09-17T14:24:06.610Z",
+        "reason": "Agent: uppercase used only on short single-line signage labels (hero banner strip, services-board tags/names) matching the real vinyl banner text in outside.webp; all paragraph body copy stays sentence case"
+      }
+    ]
+  }
+}

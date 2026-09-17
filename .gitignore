@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.DS_Store
+
+# Impeccable scratch dirs (regenerated per session; not durable project config)
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/build/
+
+SITE_PROMPT.MD
