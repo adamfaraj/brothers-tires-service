@@ -51,6 +51,7 @@
   --red-deep: #6e1315;
   --green: #1c6b3c;
   --kuruma-blue: #2663eb;
+  --kuruma-blue-dark: #1e4db7;
 
   --ink: #1a1613;
   --ink-soft: #47403b;
@@ -261,9 +262,8 @@ body {
 }
 
 .btn-kuruma:hover {
-  background: var(--paper);
-  color: var(--kuruma-blue);
-  border-color: var(--kuruma-blue);
+  background: var(--kuruma-blue-dark);
+  border-color: var(--kuruma-blue-dark);
 }
 
 /* ---------- Header ---------- */
@@ -272,7 +272,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--paper);
+  background: black;
   border-bottom: 1px solid var(--line);
   height: var(--header-h);
 }
@@ -294,7 +294,7 @@ body {
 }
 
 .site-header__logo--full {
-  height: 44px;
+  height: 75px;
   width: auto;
 }
 
@@ -335,14 +335,14 @@ body {
   font-family: var(--font-display);
   font-size: 1.15rem;
   letter-spacing: 0.01em;
-  color: var(--ink);
+  color: #d72729;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
   transition: color 160ms ease;
 }
 
 .site-header__phone:hover {
-  color: var(--red);
+  color: #e77a7c;
 }
 
 @media (max-width: 860px) {
@@ -444,7 +444,7 @@ body {
   padding: 10px;
   border: 3px solid var(--ink);
   border-radius: 50%;
-  background: var(--paper);
+  background: black;
 }
 
 .hero__emblem img {

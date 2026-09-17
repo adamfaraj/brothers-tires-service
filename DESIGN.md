@@ -12,6 +12,7 @@ colors:
   concrete-deep: "#e2dbcd"
   hairline: "rgba(26, 22, 19, 0.14)"
   kuruma-blue: "#2663eb"
+  kuruma-blue-dark: "#1e4db7"
 typography:
   display:
     fontFamily: "Anton, 'Arial Narrow', sans-serif"
@@ -59,8 +60,7 @@ components:
     rounded: "{rounded.none}"
     padding: "0.9rem 1.6rem"
   button-kuruma-hover:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.kuruma-blue}"
+    backgroundColor: "{colors.kuruma-blue-dark}"
 ---
 
 # Design System: Brothers Tire LLC
@@ -88,7 +88,8 @@ Ink-and-paper palette sampled directly from the shop's own logo, with red ration
 - **Signal Red Dark** (#a91d20): hover/pressed state for red buttons and links; also the "closed now" status color in the quick-facts strip.
 
 ### Secondary
-- **KurumaWorks Blue** (#2663eb): reserved exclusively for the `.btn-kuruma` booking button (solid fill, white text at rest; inverts to white fill / blue border+text on hover). Never appears anywhere else in the palette. See Named Rule below.
+- **KurumaWorks Blue** (#2663eb): reserved exclusively for the `.btn-kuruma` booking button (solid fill, white text at rest, darkening to KurumaWorks Blue Dark on hover). Never appears anywhere else in the palette. See Named Rule below.
+- **KurumaWorks Blue Dark** (#1e4db7): hover/pressed state for `.btn-kuruma`; text stays white, only the fill and border darken. Never used at rest.
 
 ### Neutral
 - **Ink** (#1a1613): primary text color, footer background, mobile "Call" bar button, and one alternating color of the four-panel "why" board.
@@ -147,8 +148,8 @@ The hero emblem is the sole exception to square-cut geometry: a circular medalli
 ### Buttons
 - **Shape:** square with one trimmed corner (`clip-path` notch, 14px), never rounded.
 - **Primary:** solid signal red (#d82629) fill, white text, 2px red border, `0.9rem 1.6rem` padding, uppercase Barlow bold with 0.02em tracking.
-- **Kuruma (booking):** solid KurumaWorks blue (#2663eb) fill / white text at rest; inverts to white fill / blue border+text on hover. Reserved exclusively for booking CTAs (see Named Rule under Colors).
-- **Hover / Focus:** primary darkens to #a91d20; all buttons shift 1px down on `:active`. Focus-visible gets a 3px solid red outline offset 3px, applied globally, not per-component.
+- **Kuruma (booking):** solid KurumaWorks blue (#2663eb) fill / white text at rest; fill and border darken to #1e4db7 on hover, text stays white. Reserved exclusively for booking CTAs (see Named Rule under Colors).
+- **Hover / Focus:** primary darkens to #a91d20, kuruma darkens to #1e4db7; all buttons shift 1px down on `:active`. Focus-visible gets a 3px solid red outline offset 3px, applied globally, not per-component. Every button hover darkens fill and border together rather than inverting to a light background, so the notch's cut edge never loses its border color.
 - **Mobile bar variant:** the fixed bottom bar's "Call" button drops the notch entirely (`clip-path: none`) and squares off — the one place the signature device is intentionally absent, for a full-bleed dual-button dock.
 
 ### Chips
