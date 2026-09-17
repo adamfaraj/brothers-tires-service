@@ -6,6 +6,13 @@ document.querySelectorAll('[data-kuruma-link]').forEach((link) => {
   link.href = KURUMA_URL;
 });
 
+// Koalafi's online application flow for this store.
+const KOALAFI_URL = 'http://dealer.koalafi.com/ApplicationForm/IntroScreen?publicStoreId=24743420-c15f-417d-bc94-6d58b53be831&cm=Copy';
+
+document.querySelectorAll('[data-koalafi-link]').forEach((link) => {
+  link.href = KOALAFI_URL;
+});
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Hours: Mon-Fri 8:00-18:00, Sat 8:00-15:00, Sun 9:00-14:00, America/New_York.

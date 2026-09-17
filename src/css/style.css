@@ -267,7 +267,7 @@ body {
 }
 
 .btn-kuruma:focus-visible {
-  outline-color: var(--paper);
+  outline: 3px solid var(--paper);
 }
 
 /* ---------- Header ---------- */
@@ -788,6 +788,34 @@ body {
   padding: 0.55rem 1rem;
   border: 2px solid var(--ink);
   clip-path: polygon(0 0, 100% 0, 100% 100%, var(--notch) 100%);
+}
+
+.financing__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.financing__koalafi {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.financing__koalafi-logo {
+  height: 27px;
+  width: auto;
+}
+
+.financing__koalafi-btn {
+  height: 30px;
+  width: auto;
+  transition: opacity 160ms ease;
+}
+
+.financing__koalafi:hover .financing__koalafi-btn {
+  opacity: 0.85;
 }
 
 /* ---------- Visit ---------- */
